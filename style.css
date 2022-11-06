@@ -1,0 +1,209 @@
+/* body*/
+body 
+{
+    margin: 0;
+    font-family: 'Irish Grover', sans-serif;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;  
+}
+
+*,
+*:before
+*:after
+{
+    box-sizing: border-box
+}
+
+h1, h2, h3, h4, h5, h6 
+{
+    margin: 0;
+}
+
+/* Container*/
+.container 
+{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* header*/
+.header
+{
+    padding-top: 10px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header_inner 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_logo
+{
+    font-size: 35px;
+    font-weight: 700;
+    color: silver;
+}
+
+/*nav*/
+.nav 
+{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.nav_link 
+{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    color: silver;
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+.nav_link:after
+{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+    background-color:  #fce38a;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity 0.2s linear;
+}
+.nav_link:hover
+{
+    color: #fce38a;
+}
+.nav_link:hover:after
+{
+   opacity: 1;
+}
+/* intro */
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: url("../images/intro.jpg") center no-repeat;
+    -webkit-background-size: cover;
+     background-size: cover;
+    text-align: center;
+}
+
+.intro_inner{
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    
+}
+.intro_suptitel
+{
+    margin-bottom: 15px;
+    font-size: 45px;
+    color: silver;
+    font-family: 'Aclonica', sans-serif;
+     
+}
+.intro_title 
+{
+    color: silver;
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    
+}
+.intro_title:after
+{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: silver;
+    margin: 30px auto ;
+    
+}
+
+/*Button*/
+.btn 
+{
+    display:inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+    border: 3px solid silver;
+    font-size: 14px;
+    font-weight: 700;
+    color: silver;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s linear, color 0.2s linear;
+    
+}
+.btn:hover
+{
+    background-color: silver;
+    color: black;
+    
+}
+
+/*Slider*/
+.slider
+{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+.slider_inner
+{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.slider_item
+{
+    width: 24%;
+    border-top: 3px solid silver;
+    position: relative;
+    opacity: 0.7;
+    padding: 20px 0;
+    font-size: 18px;
+    color: silver;
+    text-transform: uppercase;
+    
+}
+.slider_item.active
+{
+    opacity: 1;
+}
+.slider_item.active:before 
+{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color:red;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+}
+.slider_number
+{
+    font-size: 24px;
+    font-weight: 700px;
+}
